@@ -1,0 +1,4 @@
+FROM node AS publish
+COPY test-entrypoint.sh .
+COPY test.js .
+ENTRYPOINT ["bash", "test-entrypoint.sh"]

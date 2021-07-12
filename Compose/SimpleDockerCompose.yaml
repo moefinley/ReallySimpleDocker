@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  reallysimpledockerserver:
+    image: reallysimpledocker:latest
+    ports:
+      - "8085:8080"
+  reallysimpledockertests:
+    image: reallysimpledockertests:latest
+    depends_on:
+      - reallysimpledockerserver
+
